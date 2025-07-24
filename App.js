@@ -240,3 +240,6 @@ window.addEventListener("DOMContentLoaded", () => {
   // Actualizar desbloqueos por si hay notas precargadas
   actualizarDesbloqueo();
 });
+document.addEventListener("DOMContentLoaded", () => {
+  mostrarSemestres();
+});
