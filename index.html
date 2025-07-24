@@ -1,136 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Malla Interactiva Medicina UCSC</title>
-  <!-- Puedes añadir aquí enlace a CSS externo o estilos inline -->
-  <style>
-    /* Estilos básicos para que sea funcional ahora, luego personalizamos */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background-color: #fff0f6; /* un rosa claro base */
-      color: #333;
-    }
-    h1 {
-      text-align: center;
-      color: #d6336c;
-      margin-bottom: 5px;
-    }
-    #avance-texto {
-      text-align: center;
-      font-size: 0.9rem;
-      margin-bottom: 5px;
-      color: #a83254;
-    }
-    #barra-avance {
-      width: 60%;
-      height: 20px;
-      background-color: #f8d7da;
-      border-radius: 10px;
-      margin: 0 auto 20px auto;
-      overflow: hidden;
-    }
-    #barra-avance-inner {
-      height: 100%;
-      width: 0;
-      background-color: #d6336c;
-      border-radius: 10px 0 0 10px;
-      transition: width 0.5s ease;
-    }
-    #malla-container {
-      display: flex;
-      overflow-x: auto;
-      gap: 20px;
-      padding-bottom: 10px;
-    }
-    .anio {
-      min-width: 250px;
-      background-color: #fcd6e4;
-      border-radius: 15px;
-      padding: 10px;
-      flex-shrink: 0;
-    }
-    .anio-titulo {
-      text-align: center;
-      font-weight: bold;
-      color: #a83254;
-      margin-bottom: 10px;
-      font-size: 1.2rem;
-      border-bottom: 2px solid #d6336c;
-      padding-bottom: 5px;
-    }
-    .semestres-container {
-      display: flex;
-      justify-content: space-around;
-      margin-bottom: 15px;
-    }
-    .semestre-bloque {
-      width: 50px;
-      height: 50px;
-      background-color: #f9c9d9;
-      border-radius: 10px;
-      text-align: center;
-      line-height: 50px;
-      font-weight: bold;
-      color: #a83254;
-      cursor: default;
-      user-select: none;
-      margin: 0 5px;
-    }
-    .ramos-container {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .ramo-bloque {
-      background-color: white;
-      border-radius: 8px;
-      padding: 8px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      font-size: 0.9rem;
-      color: #4a4a4a;
-      cursor: default;
-    }
-    .ramo-nombre {
-      font-weight: 600;
-      margin-bottom: 3px;
-    }
-    .ramo-info {
-      font-size: 0.8rem;
-      color: #888;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .nota-input {
-      width: 40px;
-      padding: 3px 5px;
-      font-size: 0.9rem;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      text-align: center;
-    }
-    .nota-input:disabled {
-      background-color: #eee;
-      color: #aaa;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Malla Interactiva - Medicina - UCSC</title>
 </head>
-<body>
+<body style="font-family: Arial, sans-serif; margin: 20px;">
 
-  <h1>Malla Interactiva - Medicina UCSC</h1>
-  <div id="avance-texto">Avance total: 0%</div>
-  <div id="barra-avance">
-    <div id="barra-avance-inner"></div>
-  </div>
+    <h1 style="text-align: center; margin-bottom: 5px;">
+        Malla Interactiva - Medicina - UCSC
+    </h1>
 
-  <div id="malla-container">
-    <!-- Aquí se mostrarán los años, semestres y ramos dinámicamente -->
-  </div>
+    <p id="avance-text" style="text-align: center; font-size: 0.9rem; margin-top: 0; margin-bottom: 10px;">
+        Avance total: 0%
+    </p>
 
-  <script src="ramos.js"></script>
-  <script src="app.js"></script>
+    <div id="barra-avance" style="
+        width: 60%;
+        height: 20px;
+        background-color: #ddd;
+        border-radius: 10px;
+        margin: 0 auto 20px auto;
+        overflow: hidden;
+    ">
+        <div id="barra-progreso" style="
+            height: 100%;
+            width: 0%;
+            background-color: #f9a8d4; /* rosado */
+            border-radius: 10px 0 0 10px;
+            transition: width 0.5s ease;
+        "></div>
+    </div>
+
+    <!-- Contenedor principal donde se mostrará la malla curricular -->
+    <div id="malla-container" style="
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 20px;
+        border: 1px solid #f9a8d4;
+        border-radius: 12px;
+        background-color: #fff0f6;
+        width: 95%;
+        margin: 0 auto;
+    ">
+        <!-- Aquí se insertan dinámicamente los bloques de años, semestres y ramos -->
+    </div>
+
+    <script src="ramos.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
