@@ -1,0 +1,102 @@
+/* Estilo general */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, Inter, Arial, sans-serif;
+  background-color: #fefefe;
+  color: #333;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Títulos */
+h1, h2, h3 {
+  color: #d81b60;
+  margin-bottom: 1rem;
+}
+
+/* Estilo del selector de semestre */
+label {
+  font-weight: bold;
+  margin-right: 0.5rem;
+  color: #d81b60;
+}
+
+select {
+  padding: 0.5rem 1rem;
+  border: 2px solid #f8bbd0;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+select:focus {
+  outline: none;
+  border-color: #ec407a;
+}
+
+/* Contenedor de ramos */
+.ramos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Estilo individual de cada ramo */
+.ramo-card {
+  background-color: #ffffff;
+  border: 2px solid #f8bbd0;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ramo-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Destacar ramo obligatorio con color */
+.ramo-obligatorio {
+  border-left: 6px solid #ec407a;
+}
+
+/* Título del ramo */
+.ramo-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #ec407a;
+}
+
+/* Detalles del ramo */
+.ramo-card p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+/* Etiquetas especiales */
+.requisito {
+  font-style: italic;
+  color: #888;
+}
+
+.creditos {
+  font-weight: bold;
+  color: #d81b60;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+  .ramos-grid {
+    grid-template-columns: 1fr;
+  }
+}
