@@ -1,52 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Malla Interactiva - Medicina - UCSC</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malla Interactiva - Medicina - UCSC</title>
+  <link rel="stylesheet" href="estilos.css" />
 </head>
-<body style="font-family: Arial, sans-serif; margin: 20px;">
+<body>
 
-    <h1 style="text-align: center; margin-bottom: 5px;">
-        Malla Interactiva - Medicina - UCSC
-    </h1>
+  <h1 style="text-align: center; margin-bottom: 5px;">
+    Malla Interactiva - Medicina - UCSC
+  </h1>
 
-    <p id="avance-text" style="text-align: center; font-size: 0.9rem; margin-top: 0; margin-bottom: 10px;">
-        Avance total: 0%
-    </p>
+  <!-- Texto avance -->
+  <p id="avance-text" style="text-align: center; font-size: 0.9rem; margin-top: 0; margin-bottom: 10px;">
+    Avance total: 0%
+  </p>
 
-    <div id="barra-avance" style="
-        width: 60%;
-        height: 20px;
-        background-color: #ddd;
-        border-radius: 10px;
-        margin: 0 auto 20px auto;
-        overflow: hidden;
+  <!-- Barra de progreso -->
+  <div id="barra-avance" style="
+      width: 60%;
+      height: 20px;
+      background-color: #ddd;
+      border-radius: 10px;
+      margin: 0 auto 10px auto;
+      overflow: hidden;
     ">
-        <div id="barra-progreso" style="
-            height: 100%;
-            width: 0%;
-            background-color: #f9a8d4; /* rosado */
-            border-radius: 10px 0 0 10px;
-            transition: width 0.5s ease;
-        "></div>
-    </div>
+    <div id="barra-progreso" style="
+        height: 100%;
+        width: 0%;
+        background-color: #f9a8d4;
+        border-radius: 10px 0 0 10px;
+        transition: width 0.5s ease;
+      "></div>
+  </div>
 
-    <!-- Contenedor principal donde se mostrará la malla curricular -->
-    <div id="malla-container" style="
-        overflow-x: auto;
-        white-space: nowrap;
-        padding-bottom: 20px;
-        border: 1px solid #f9a8d4;
-        border-radius: 12px;
-        background-color: #fff0f6;
-        width: 95%;
-        margin: 0 auto;
+  <!-- Promedio ponderado debajo de la barra -->
+  <p id="promedio-ponderado" style="text-align: center; font-size: 1rem; color: #d81b60; margin-top: 0; margin-bottom: 20px;">
+    Promedio ponderado: 0.00
+  </p>
+
+  <!-- Contenedor principal donde se mostrará la malla curricular -->
+  <div id="malla-container" style="
+      overflow-x: auto;
+      white-space: nowrap;
+      padding-bottom: 20px;
+      border: 1px solid #f9a8d4;
+      border-radius: 12px;
+      background-color: #fff0f6;
+      width: 95%;
+      margin: 0 auto;
     ">
-        <!-- Aquí se insertan dinámicamente los bloques de años, semestres y ramos -->
-    </div>
+    <!-- Aquí se insertan dinámicamente los bloques de años, semestres y ramos -->
+  </div>
 
-    <script src="ramos.js"></script>
-    <script src="app.js"></script>
+  <script type="module" src="app.js"></script>
 </body>
 </html>
