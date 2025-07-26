@@ -2,22 +2,18 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Malla Interactiva Medicina</title>
-  <link rel="stylesheet" href="estilos.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malla Interactiva Medicina UCSC</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Malla Interactiva: Medicina</h1>
-    
-    <label for="semestre">Selecciona un semestre:</label>
-    <select id="semestre"></select>
+  <header><h1>Malla Interactiva Medicina UCSC</h1></header>
+  <main id="contenedor"></main>
+  <footer>
+    <div>Barra de avance</div>
+  </footer>
 
-    <div class="ramos-grid" id="ramosContainer"></div>
-  </div>
-
-  <!-- Esta línea FALTABA -->
-  <script src="ramos.js"></script>
-  <script src="app.js"></script>
+  <script type="module" src="ramos.js"></script>
+  <script type="module" src="app.js"></script>
 </body>
 </html>
